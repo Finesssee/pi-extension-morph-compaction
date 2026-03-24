@@ -1,25 +1,42 @@
 # Pi Extension: morph-compaction
 
-Private source repo for the Pi `morph-compaction` extension.
-
-Repo contents:
-- `.pi/extensions/morph-compaction/`
-- `templates/morph-compaction.json`
+Morph-first session compaction extension for Pi.
 
 What it adds:
 - Morph-first session compaction
 - `/compactor`
 - fallback to Pi built-in compaction when Morph is unavailable
 
-Runtime dependencies:
-- none beyond Pi itself
+## Install
 
-Install:
+After publishing to npm:
+
 ```bash
-rsync -a .pi/ ~/.pi/
-cp -n templates/morph-compaction.json ~/.pi/agent/morph-compaction.json
+pi install npm:pi-morph-compaction
 ```
 
-Notes:
+Until then, local source install still works:
+
+```bash
+rsync -a .pi/ ~/.pi/
+```
+
+## Config
+
+`morph-compaction` auto-creates its default config on first use at:
+
+```bash
+~/.pi/agent/morph-compaction.json
+```
+
+The checked-in template at [templates/morph-compaction.json](/home/fsos/pi-extension-repos/pi-extension-morph-compaction/templates/morph-compaction.json) is now just a reference copy, not a required manual install step.
+
+## Runtime dependencies
+
+- none beyond Pi itself
+
+## Notes
+
 - `MORPH_API_KEY` belongs in your local `.env`, not in this repo.
-- The template is only the default mode/config file. Runtime compaction state is kept separately under `~/.pi/agent/`.
+- Runtime compaction state is kept separately under `~/.pi/agent/morph-compaction-state.json`.
+- The package metadata is set up so Pi can discover the extension directly from the published package instead of depending on manual hidden-folder copying.

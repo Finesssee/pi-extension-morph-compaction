@@ -1,0 +1,32 @@
+{
+  "name": "pi-morph-compaction",
+  "version": "0.1.0",
+  "description": "Morph-first session compaction extension for Pi coding agent",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-coding-agent",
+    "extension",
+    "compaction",
+    "morph"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Finesssee/pi-extension-morph-compaction.git"
+  },
+  "files": [
+    ".pi/extensions/morph-compaction",
+    "templates/morph-compaction.json",
+    "README.md"
+  ],
+  "pi": {
+    "extensions": [
+      "./.pi/extensions/morph-compaction/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*",
+    "@mariozechner/pi-tui": "*"
+  }
+}
