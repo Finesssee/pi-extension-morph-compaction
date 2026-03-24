@@ -9,16 +9,22 @@ What it adds:
 
 ## Install
 
+Install directly from GitHub right now:
+
+```bash
+pi install https://github.com/Finesssee/pi-extension-morph-compaction
+```
+
 After publishing to npm:
 
 ```bash
 pi install npm:pi-morph-compaction
 ```
 
-Until then, local source install still works:
+For local development, a local path install also works:
 
 ```bash
-rsync -a .pi/ ~/.pi/
+pi install /absolute/path/to/pi-extension-morph-compaction
 ```
 
 ## Config
