@@ -45,8 +45,9 @@ function effectiveMode(pi: ExtensionAPI): CompactionMode {
 }
 
 function updateStatus(ctx: ExtensionContext): void {
-	const mode = effectiveModeFromState();
-	ctx.ui.setStatus(STATUS_KEY, buildFooterStatus(mode, readState()));
+	effectiveModeFromState();
+	readState();
+	ctx.ui.setStatus(STATUS_KEY, undefined);
 }
 
 function effectiveModeFromState(): CompactionMode {

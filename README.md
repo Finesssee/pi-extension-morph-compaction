@@ -6,6 +6,7 @@ What it adds:
 - Morph-first session compaction
 - `/compactor`
 - fallback to Pi built-in compaction when Morph is unavailable
+- no footer status token during normal Pi use
 
 ## Install
 
